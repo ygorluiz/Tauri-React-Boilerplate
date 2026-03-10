@@ -1,40 +1,48 @@
-import { createMemoryRouter } from "react-router-dom";
-import RootLayout from "@/layouts/RootLayout";
-import Home from "@/pages/Home";
-import About from "@/pages/About";
-import Settings from "@/pages/Settings";
-import Examples from "@/pages/Examples";
-import UpdatePage from "@/pages/Update";
-import NotFound from "@/pages/NotFound";
+import { lazy, Suspense } from 'react';
+import { createMemoryRouter } from 'react-router-dom';
+import RootLayout from '@/layouts/RootLayout';
+
+const Home = lazy(() => import('@/pages/Home'));
+const About = lazy(() => import('@/pages/About'));
+const Settings = lazy(() => import('@/pages/Settings'));
+const Examples = lazy(() => import('@/pages/Examples'));
+const UpdatePage = lazy(() => import('@/pages/Update'));
+const NotFound = lazy(() => import('@/pages/NotFound'));
+
+const withSuspense = (Component: React.ElementType) => (
+  <Suspense fallback={<div className="flex h-screen items-center justify-center">Loading...</div>}>
+    <Component />
+  </Suspense>
+);
 
 export const router = createMemoryRouter([
   {
-    path: "/",
+    path: '/',
     element: <RootLayout />,
     children: [
       {
         index: true,
-        element: <Home />,
+        element: withSuspense(Home),
       },
       {
-        path: "about",
-        element: <About />,
+        path: 'about',
+        element: withSuspense(About),
       },
       {
-        path: "settings",
-        element: <Settings />,
+        path: 'settings',
+        element: withSuspense(Settings),
       },
       {
-        path: "examples",
-        element: <Examples />,
+        path: 'examples',
+        element: withSuspense(Examples),
       },
       {
-        path: "update",
-        element: <UpdatePage />,
+        path: 'update',
+        element: withSuspense(UpdatePage),
       },
       {
-        path: "*",
-        element: <NotFound />,
+        path: '*',
+        element: withSuspense(NotFound),
       },
     ],
   },

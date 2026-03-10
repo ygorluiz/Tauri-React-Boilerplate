@@ -5,6 +5,6 @@ export interface User {
 }
 
 export interface AppConfig {
-  theme: "light" | "dark";
+  theme: 'light' | 'dark';
   language: string;
 }

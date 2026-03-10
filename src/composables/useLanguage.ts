@@ -1,6 +1,6 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
-export type Language = "en" | "fr";
+export type Language = 'en' | 'fr';
 
 export function useLanguage() {
   const { i18n } = useTranslation();
@@ -9,7 +9,7 @@ export function useLanguage() {
 
   const changeLanguage = async (lang: Language) => {
     await i18n.changeLanguage(lang);
-    localStorage.setItem("language", lang);
+    localStorage.setItem('language', lang);
   };
 
   return {

@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+pnpm lint-staged
+# Manter o bump de versão antigo? 
+# O usuário pode achar chato o bump em cada commit, 
+# mas vou mantê-lo por compatibilidade com o que estava no .githooks/pre-commit
+# bash scripts/setup-hooks.sh # Este script só instala o hook path, não é o que faz o bump.
+# O script de bump estava em .githooks/pre-commit.

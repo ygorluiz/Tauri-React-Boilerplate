@@ -1,6 +1,6 @@
-import { Outlet } from "react-router-dom";
-import { useTheme } from "@/composables";
-import { Updater } from "@/components/Updater";
+import { Outlet } from 'react-router-dom';
+import { useTheme } from '@/composables';
+import { Updater } from '@/components/Updater';
 
 export default function RootLayout() {
   useTheme();
