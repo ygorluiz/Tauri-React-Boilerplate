@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-export type Language = 'en' | 'fr';
+export type Language = 'en' | 'fr' | 'pt-BR';
 
 export function useLanguage() {
   const { i18n } = useTranslation();

@@ -14,15 +14,10 @@ export function Updater() {
   const downloaded = useRef<number>(0);
 
   useEffect(() => {
-    console.log('[Updater] Checking for updates...');
     check()
       .then((u) => {
-        console.log('[Updater] check() result:', u);
         if (u?.available) {
-          console.log('[Updater] Update available:', u.version);
           setUpdate(u);
-        } else {
-          console.log('[Updater] No update available');
         }
       })
       .catch((err) => console.error('[Updater] check() failed:', err));
