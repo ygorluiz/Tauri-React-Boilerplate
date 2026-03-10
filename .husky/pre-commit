@@ -1,3 +1,0 @@
-pnpm lint-staged
-# O bump de versão estava em .githooks/pre-commit
-# bash .githooks/pre-commit # Se quiser manter o prompt interativo de versão em cada commit

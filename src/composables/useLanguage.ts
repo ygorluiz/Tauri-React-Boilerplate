@@ -3,17 +3,17 @@ import { useTranslation } from 'react-i18next';
 export type Language = 'en' | 'fr' | 'pt-BR';
 
 export function useLanguage() {
-  const { i18n } = useTranslation();
+	const { i18n } = useTranslation();
 
-  const currentLanguage = i18n.language as Language;
+	const currentLanguage = i18n.language as Language;
 
-  const changeLanguage = async (lang: Language) => {
-    await i18n.changeLanguage(lang);
-    localStorage.setItem('language', lang);
-  };
+	const changeLanguage = async (lang: Language) => {
+		await i18n.changeLanguage(lang);
+		localStorage.setItem('language', lang);
+	};
 
-  return {
-    currentLanguage,
-    changeLanguage,
-  };
+	return {
+		currentLanguage,
+		changeLanguage,
+	};
 }
