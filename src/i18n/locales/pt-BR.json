@@ -1,0 +1,122 @@
+{
+  "common": {
+    "back": "Voltar",
+    "loading": "Carregando...",
+    "error": "Erro"
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "settings": "Configurações",
+    "examples": "Exemplos"
+  },
+  "home": {
+    "title": "Bem-vindo ao Tauri!",
+    "subtitle": "Um boilerplate moderno para criar apps desktop",
+    "description": "Este boilerplate inclui React 19, TypeScript, TailwindCSS e Tauri v2 com uma arquitetura limpa.",
+    "features": {
+      "title": "Funcionalidades",
+      "theme": "Tema Claro/Escuro com suporte ao sistema",
+      "composables": "Composables reutilizáveis (hooks estilo Nuxt)",
+      "routing": "React Router com MemoryRouter",
+      "ui": "Componentes shadcn/ui",
+      "notifications": "Notificações nativas do sistema",
+      "window": "API de controle de janela"
+    },
+    "getStarted": "Começar",
+    "viewExamples": "Ver Exemplos"
+  },
+  "about": {
+    "title": "Sobre",
+    "description": "Este é um boilerplate Tauri pronto para produção com tecnologias modernas.",
+    "tech": {
+      "title": "Tecnologias",
+      "frontend": "Frontend: React 19, TypeScript, TailwindCSS",
+      "backend": "Backend: Rust, Tauri v2",
+      "ui": "UI: shadcn/ui, Lucide Icons",
+      "routing": "Roteamento: React Router v7"
+    },
+    "architecture": {
+      "title": "Arquitetura",
+      "modular": "Estrutura modular e escalável",
+      "composables": "Composables reutilizáveis para APIs do Tauri",
+      "typed": "Segurança de tipos completa com TypeScript",
+      "documented": "Documentação completa"
+    }
+  },
+  "settings": {
+    "title": "Configurações",
+    "theme": {
+      "title": "Tema",
+      "description": "Escolha seu tema preferido",
+      "light": "Claro",
+      "dark": "Escuro",
+      "system": "Sistema",
+      "systemDescription": "Adapta-se automaticamente às preferências do seu sistema"
+    },
+    "language": {
+      "title": "Idioma",
+      "description": "Escolha seu idioma preferido",
+      "en": "English",
+      "fr": "Français",
+      "pt-BR": "Português (Brasil)"
+    },
+    "updates": {
+      "title": "Atualizações",
+      "currentVersion": "Versão atual",
+      "check": "Verificar atualizações"
+    }
+  },
+  "updater": {
+    "title": "Atualização Disponível",
+    "version": "Uma nova versão está disponível",
+    "install": "Instalar",
+    "downloading": "Baixando...",
+    "later": "Depois"
+  },
+  "update": {
+    "title": "Atualizações",
+    "currentVersion": "Versão atual",
+    "availableVersion": "Versão disponível",
+    "checking": "Verificando atualizações...",
+    "upToDate": "Você está atualizado.",
+    "available": "Atualização disponível",
+    "checkFailed": "Falha na verificação",
+    "checkButton": "Verificar atualizações",
+    "installButton": "Instalar Atualização",
+    "installing": "Instalando...",
+    "downloading": "Baixando..."
+  },
+  "examples": {
+    "title": "Exemplos da API do Tauri",
+    "subtitle": "Demonstração dos composables Tauri disponíveis",
+    "window": {
+      "title": "Controle de Janela",
+      "minimize": "Minimizar",
+      "maximize": "Alternar Maximizar",
+      "close": "Fechar"
+    },
+    "notifications": {
+      "title": "Notificações",
+      "send": "Enviar Notificação",
+      "description": "Notificações nativas do sistema",
+      "test": {
+        "title": "Teste de Notificação",
+        "body": "Esta é uma notificação nativa do sistema!"
+      }
+    },
+    "system": {
+      "title": "Informações do Sistema",
+      "get": "Obter Info do Sistema",
+      "os": "SO",
+      "arch": "Arquitetura",
+      "family": "Família"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Página não encontrada",
+    "description": "A página que você está procurando não existe.",
+    "backHome": "Voltar para o Início"
+  }
+}

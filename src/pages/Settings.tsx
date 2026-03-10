@@ -82,6 +82,14 @@ export default function Settings() {
               <Languages className="mr-2 h-4 w-4" />
               {t('settings.language.fr')}
             </Button>
+            <Button
+              variant={currentLanguage === 'pt-BR' ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => changeLanguage('pt-BR')}
+            >
+              <Languages className="mr-2 h-4 w-4" />
+              {t('settings.language.pt-BR')}
+            </Button>
           </div>
         </div>
       </div>
