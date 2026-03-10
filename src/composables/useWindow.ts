@@ -52,6 +52,10 @@ export function useWindow() {
 		return await appWindow.isFullscreen();
 	};
 
+	const startDragging = async () => {
+		await appWindow.startDragging();
+	};
+
 	return {
 		minimize,
 		maximize,
@@ -64,5 +68,6 @@ export function useWindow() {
 		setFullscreen,
 		isMaximized,
 		isFullscreen,
+		startDragging,
 	};
 }

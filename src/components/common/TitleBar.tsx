@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useWindow } from '@/composables';
 
 export function TitleBar() {
-  const { minimize, toggleMaximize, close, isMaximized } = useWindow();
+  const { minimize, toggleMaximize, close, isMaximized, startDragging } = useWindow();
   const [maximized, setMaximized] = useState(false);
 
   useEffect(() => {
@@ -13,15 +13,22 @@ export function TitleBar() {
     
     updateMaximized();
     
-    // Pequeno intervalo para checar se a janela mudou (ou usar listener do tauri se preferir)
+    // Pequeno intervalo para checar se a janela mudou
     const interval = setInterval(updateMaximized, 500);
     return () => clearInterval(interval);
   }, [isMaximized]);
 
+  const handleMouseDown = (e: React.MouseEvent) => {
+    // Só inicia o drag se for com o botão esquerdo e não estiver clicando nos botões de controle
+    if (e.button === 0 && (e.target as HTMLElement).tagName !== 'BUTTON') {
+      startDragging();
+    }
+  };
+
   return (
     <div 
-      data-tauri-drag-region 
-      className="flex items-center justify-between h-8 bg-background/80 backdrop-blur-md border-b select-none fixed top-0 left-0 right-0 z-[100]"
+      onMouseDown={handleMouseDown}
+      className="flex items-center justify-between h-8 bg-background/80 backdrop-blur-md border-b select-none fixed top-0 left-0 right-0 z-[100] cursor-default"
     >
       <div className="flex items-center px-3 gap-2 pointer-events-none">
         <img src="/tauri.svg" className="w-3.5 h-3.5" alt="logo" />
